@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Tex-Zen Rose Garden Slide Show ></title>
+<meta name="Copyright" content="Copyright © 2005 Tex-Zen Dreams">
+<meta name="Author" content="Jeff Hankins">
+<meta name="Owner" content="Tex-Zen Dreams">
+<meta name="Robots" content="index, follow, noarchive, noimageclick, noimageindex">
+<meta name="Distribution" content="Global">
+<meta name="Revisit-After" content="15 days">
+<meta name="Rating" content="General">
+<meta name="Reply-to" content="jhdreams@texzendreams.com">
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=2,Transition=3)">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+songNum = new Array();
+songNum[0] = "#";
+songNum[1] = "music/icrossmyheart.mid";
+songNum[2] = "music/i-swear.mid";
+songNum[3] = "music/DontKnowMuch.mid";
+songNum[4] = "music/yourlov.mid";
+songNum[5] = "music/therose.mid";
+songNum[6] = "music/loveanddreams/AllIHaveToIsDream[1].mid";
+songNum[7] = "music/loveanddreams/EndlessLove[1].mid";
+songNum[8] = "music/loveanddreams/eyeslove[1].mid";
+songNum[9] = "music/loveanddreams/icecastl[1].mid";
+songNum[10] = "music/loveanddreams/idreamed[1].mid";
+songNum[11] = "music/loveanddreams/RedRedWine[1].mid";
+songNum[12] = "music/loveanddreams/unchained[1].mid";
+songNum[13] = "music/loveanddreams/SavingAllMyLove[1].mid";
+
+
+songNum[14] = "#";
+var music = null;
+var track = 0;
+var ver = navigator.appName;
+function audioCheck(plugName) {
+for (var i = 0; i < navigator.plugins.length; i++) {
+if (navigator.plugins[i].name.toLowerCase() == plugName.toLowerCase()) {
+for (var j = 0; j < navigator.plugins[i].length; j++) {
+if (navigator.plugins[i][j].enabledPlugin) {
+return true;
+   }
+}
+return false;
+   }
+}
+return false;
+}
+function chooseSong(s) { // ie
+track = s.options[s.selectedIndex].value; 
+if (ver == "Microsoft Internet Explorer") {
+document.all.music.src = songNum[track]; 
+} else {
+songPlay('play');
+   }
+}
+function songPlay(cmd) { // netscape
+if (audioCheck("LiveAudio")) {
+if (cmd == 'play') {
+document.musicSource.play(false, songNum[track]);
+   }
+} else {
+alert("You Do Not Have The Correct Plugin");
+   }
+}
+//  End -->
+</script>
+<style type="text/css">
+<!--
+
+A:LINK    { color: white; }
+A:VISITED { color: white; }
+A:ACTIVE  { color: black; }
+A:HOVER   { color: Red; }
+A         { text-decoration : none; }
+
+-->
+</style>
+<style> <!-- .popshadow{ position:relative; left:-5; top:-5; filter:shadow(silver,direction=135) } --> </style>
+</head>
+
+<body bgcolor="#005000" background=mainimg/stexpuzzle.gif text=white >
+<script language=JavaScript>
+<!--
+
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
+
+<img src="roseimg/slideshow.jpg"><br>
+<div align="right"><FONT FACE="Tahoma" size=2>
+<a href="#" onClick="history.go(-1)">Go Back </a> / 
+<A HREF="javascript:window.close()" title="close window"> Close Window</A></FONT></div>
+<form name=choose>
+<select size=1 name=track onChange="chooseSong(this);">
+<option value="0">Choose Music:</option>
+<option value="1">I Cross My Heart</option>
+<option value="2">I Swear</option>
+<option value="3">Don't Know Much</option>
+<option value="4">Your Love Amazes Me</option>
+<option value="5">The Rose</option>
+<option value="6">All I Have To Do Is Dream</option>
+<option value="7">Endless Love</option>
+<option value="8">Eyes of Love</option>
+<option value="9">Theme from Ice Castles</option>
+<option value="10">I Dreamed</option>
+<option value="11">Red Red Wine</option>
+<option value="12">Unchained Melody</option>
+<option value="13">Saving All My Love</option>
+<option value="14">STOP THE MUSIC</option>
+
+</select>
+<input type=button onMouseDown="chooseSong(document.choose.track)" value=" Play ">
+</form>
+
+<script language="JavaScript">
+<!-- Begin
+var ver = navigator.appName;
+if (ver == "Microsoft Internet Explorer") {
+document.write('<bgsound src="music/loveanddreams/AllIHaveToIsDream[1].mid" ID=music loop=1 AUTOSTART=true>');
+} else {
+document.write('<embed type="audio/midi" src="music/love and dreams/AllIHaveToIsDream[1].mid" AUTOSTART=true hidden=true VOLUME="80" name="musicSource" MASTERSOUND></EMBED>');
+}
+// End -->
+</script>
+
+<table border=0 width=100%><tr><td><p align=left>
+<input type="button" id="btnPrev" value="<< Previous" onclick="Prev();"> <input type="button" id="bntPlay" value="Auto - Manual" onclick="Play()"> <input type="button" id="btnNext" value="  Next >>  " onclick="Next();"><font size=2 face="arial"> Slide # <SPAN id="_Ath_Img_X"></SPAN>&nbsp;of&nbsp;<SPAN id="_Ath_Img_N"></SPAN></font>
+
+</p><p></p></td></tr>
+<tr><td VALIGN="top" align="center" class="popshadow">
+<p align=justify><img id="_Ath_Slide" onload="OnImgLoad()" border=1 vspace=3 hspace=10 align=left width=200> 
+
+<font size=2 face="arial"><b> </b> <SPAN id="_Ath_FileName"> </SPAN> 
+</font></p><p></p></td></tr>
+<tr><td><p align=center><font size=1 face="arial">All photos by Jeff Hankins. Copyright 2001 Tex-Zen Dreams.</font>
+</p>
+</td></tr></table>
+<script language="JavaScript1.2">
+g_fPlayMode = 0;
+g_iimg = -1;
+g_imax = 0;
+g_ImageTable = new Array();
+
+function ChangeImage(fFwd)
+{
+if (fFwd)
+{
+if (++g_iimg==g_imax)
+g_iimg=0;
+}
+else
+{
+if (g_iimg==0)
+g_iimg=g_imax;
+g_iimg--;
+}
+Update();
+}
+
+function getobject(obj){
+if (document.getElementById)
+return document.getElementById(obj)
+else if (document.all)
+return document.all[obj]
+}
+
+function Update(){
+getobject("_Ath_Slide").src = g_ImageTable[g_iimg][0];
+getobject("_Ath_FileName").innerHTML = g_ImageTable[g_iimg][1];
+getobject("_Ath_Img_X").innerHTML = g_iimg + 1;
+getobject("_Ath_Img_N").innerHTML = g_imax;
+}
+
+
+function Play()
+{
+g_fPlayMode = !g_fPlayMode;
+if (g_fPlayMode)
+{
+getobject("btnPrev").disabled = getobject("btnNext").disabled = true;
+Next();
+}
+else 
+{
+getobject("btnPrev").disabled = getobject("btnNext").disabled = false;
+
+}
+}
+function OnImgLoad()
+{
+if (g_fPlayMode)
+window.setTimeout("Tick()", g_dwTimeOutSec*1000);
+}
+function Tick() 
+{
+if (g_fPlayMode)
+Next();
+}
+function Prev()
+{
+ChangeImage(false);
+}
+function Next()
+{
+ChangeImage(true);
+}
+
+////picture and text list/////////////////////////////
+
+g_ImageTable[g_imax++] = new Array ("roseimg/rg1.jpg", "We wanted to increase the arbor height, didn't want the metal sitting right on the ground and needed to tie it down and increase it's rigidity. The footing wall was the solution. But the task was easy once the angles and dimensions were determined and measured. Sorry, we seem to have lost the construction photos.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg1a.jpg", "We used an 8-inch thick ICF (insulated concrete form) product called Rastra. Loretta was an Austin area sales representative for the product. Made up of about 85% recycled Styrofoam and 15% portland cement, the 120-inch by 15-inch blocks are easily cut, shaped and glued together with a minimally expanding foam product. Reinforcing rebar was layed into the upper and lower channels in the form and #4 rebar was set vertically at the corners. Then we poured concrete into the form, which has large flow channels on 15-inch centers. Afterwards, a thin-set mortar is troweled onto the outside surfaces. We added brown coloring paint to the mortar.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg2.jpg", "Next, we had to excavate the rocky ground about a foot to eighteen inches deep. This would later be backfilled with a good base soil for the rose beds.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg3.jpg", "Excavated beds.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg4.jpg", "Replacing the excavated soil with rich base soil.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg5.jpg", "Then come the landscaping bricks 20 at a time across the creek.  Each brick weighs about 24 pounds.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg7.jpg", "Jeff inspects Loretta's work.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg8.jpg", "Jeff finally stacks his last full brick at the arbor.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg12.jpg", "Loretta adds the special mix rose soil to the arbor beds.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg10.jpg", "Loretta plants the roses.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg11.jpg", "Here is the finished and planted arbor.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rg013.jpg", "But the garden isn't finished. There are more beds on the perimeter to be backfilled with base soil and then the brick retaining walls can be stacked.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebedwest01.jpg", "Loretta mixes peat and compost into the backfilled soil in the west bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebedeast01.jpg", "Eleven pink and yellow varieties make up the east bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth01.jpg", "A 65ft long concrete retaining wall was built for the north bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth02.jpg", "The wall is built using short lengths of the Rastra ICF material and reinforced with rebar.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth03.jpg", "The ICF is rasped into smooth curves after pouring the concrete grout.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth04.jpg", "Then the concrete wall is capped with one row of retaining wall blocks.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth07.jpg", "The native soil in the bed was sifted with a 1/4'' mesh screen, rich bank soil was added, then 6'' of specialty rose soil.  Loretta supplemented this with the addition of a little compost and peat moss.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebedring01.jpg", "This is one of two 8-ft diameter <i>ring</i> beds.  The hard part is getting the diameter just right on the bottom layer of bricks so that there are no gaps or partial bricks on the top row.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebedring02.jpg", "The two <i>ring</i> beds flank the central arbor and provide for the plantings of miniature roses surrounding matching bird baths.  The <i>rings</i> signify unity.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosebednorth06.jpg", "Lover's Lane, Crystalline, and Crimson Bouquet in full bloom just weeks after planting the north bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden006.jpg", "Love roses in bloom just weeks after planting the north bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden004.jpg", "More Love roses in bloom just weeks after planting the north bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden005.jpg", "Just Dreamy roses just weeks after planting the west bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden008.jpg", "6-foot minimum width crushed granite walking paths.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden003.jpg", "Northwest view of garden.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden002.jpg", "Another northwest view of garden. The two ''Ring'' beds on either side of the arbor will be planted with miniature roses and will display dove statuary on a bird bath.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rgarden001.jpg", "Northerly view of garden showing east bed in foreground.");
+g_ImageTable[g_imax++] = new Array ("roseimg/wwellbed01b.jpg", "Wishing Well bed.");
+g_ImageTable[g_imax++] = new Array ("roseimg/wwellbed03b.jpg", "The Wishing Well bed appears to have a spring flowing from the natural rock outcropping and into a rock pool.");
+g_ImageTable[g_imax++] = new Array ("roseimg/wwellbed04b.jpg", "The Wishing Well.");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosegrdn01.jpg", "The east <i>Ring</i> bed and bird bath");
+g_ImageTable[g_imax++] = new Array ("roseimg/rosegrdn02.jpg", "The west <i>Ring</i> bed and bird bath");
+g_ImageTable[g_imax++] = new Array ("roseimg/wintergarden02.jpg", "Winter Surprise!.");
+g_ImageTable[g_imax++] = new Array ("roseimg/wintergarden01.jpg", "Winter Surprise!.");
+//extend the above list as desired
+
+g_dwTimeOutSec=15
+
+////End configuration/////////////////////////////
+
+if (document.getElementById||document.all)
+window.onload=Play
+
+</script>
+
+</body>
+</html>

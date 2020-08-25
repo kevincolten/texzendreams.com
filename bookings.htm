@@ -1,0 +1,505 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+
+<title>Tex-Zen Dreams Bed and Breakfast Availability Calendar</title>
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="ImageToolbar" content="No">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Content-Type" content="txt/html; charset=ISO-8859-1">
+<meta name="Description" content="Availability calendar for Tex-Zen Dreams B & B in Dripping Springs featuring beautifully appointed romantic lodging accommodations.">
+<meta name="Keywords" content="Dripping Springs availability, Dripping Springs lodging, Dripping Springs romantic accommodations, Dripping Springs bed and breakfast, hill country lodging, Dripping Springs Texas lodging, Tex-Zen Dreams, dripping springs lodging, hill country vacation rental, Dripping Springs honeymoon retreat, Dripping Springs anniversary retreat, Dripping Springs weekend getaway">
+<meta name="Copyright" content="Copyright 2005 Tex-Zen Dreams">
+<meta name="Author" content="Jeff Hankins">
+<meta name="Owner" content="Tex-Zen Dreams">
+<meta name="Robots" content="index, follow, noarchive, noimageclick, noimageindex">
+<meta name="Distribution" content="Global">
+<meta name="Revisit-After" content="15 days">
+<meta name="Rating" content="General">
+<meta name="Reply-to" content="jhdreams@texzendreams.com">
+<META NAME="Bed" CONTENT= "Bed and Breakfast, B&B, Bed and Breakfast Inn, Accommodations, Vacation Rental, Getaway, Retreat, Lodging, Wedding Suites">
+<META NAME="classification" CONTENT="travel, accommodations, vacation, hotel/lodging, commercial/business">
+<META NAME="page-type" CONTENT="dripping springs lodging, dripping springs texas lodging, b&bs, inn, bed and breakfast, texas accommodations">
+<META NAME="Version" CONTENT="8.0.3410">
+<META NAME="Date" CONTENT="10/11/96">
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+
+<style type="text/css">
+
+body {
+
+   background-color : beige; 
+   }
+
+div.hol {
+
+   background-color : red;
+
+   }
+
+td.outer1 {
+
+   cellpadding : 1em;
+
+   border : solid maroon; background-color : pink;
+
+   }
+
+td.outer2 {
+
+   cellpadding : 1em;
+
+   border : solid brown; background-color : #889977;
+
+   }
+
+table.inner {
+   
+   background-color : #efefef;
+
+   font-size : 8pt; color : maroon; 
+
+   }
+
+</style>
+
+<script type="text/javascript">
+
+var months = ["January 2015","February 2015","March 2015","April 2015","May 2015","June 2015","July 2015","August 2015","September 2015","October 2015","November 2015","December 2015"];
+
+var daycounts = [31,28,31,30,31,30,31,31,30,31,30,31]; //for leap years, remember to set february to 29 days
+
+//2013 firstdays = [2,5,5,1,3,6,1,4,0,2,5,0];
+
+var firstdays =    [4,0,0,3,5,1,3,6,2,4,0,2];
+
+//2014 firstdays = [3,6,6,2,4,0,2,5,1,3,6,1];
+
+// This is where you put in the Bouquet Room appointments. follow pattern [fromday,frommonth,today,tomonth,message]
+// 
+var apps1 = [ 
+
+[11,03,12,03,"Reserved for A.W."],
+[20,03,20,03,"Reserved for B&J."],
+[21,03,21,03,"Reserved for B.D."],
+[13,03,14,03,"Reserved for D.S."],
+[10,04,11,04,"Reserved for C.J."],
+[26,06,27,06,"Reserved for J.E."]
+
+];
+
+// This is where you put in the Boutonniere Room appointments. follow pattern [fromday,frommonth,today,tomonth,message]
+// 
+var apps2 = [ 
+
+[06,03,07,03,"Reserved for C.G."],
+[12,03,13,03,"Reserved for J.M."],
+[19,03,21,03,"Reserved for A.V."],
+[29,03,29,03,"Reserved for D.H."],
+[9,04,11,04,"Reserved for K.VR."],
+[30,04,02,05,"Reserved for A.G."]
+
+];
+
+function CheckDate1(month,dayno)
+
+{
+
+   var retval = new String(dayno);
+
+   var m = month + 1;
+
+      for(var app = 0; app < apps1.length; app++)
+
+   {
+
+      if(m == apps1[app][1] ) //first month
+
+      {
+
+         if(apps1[app][3] - apps1[app][1] > 0)
+
+         {
+
+            if(dayno >= apps1[app][0])
+
+            {
+
+               retval = "<div class='hol' title='" + apps1[app][4] + "'>" + dayno + "</div>";
+
+            }
+
+         }
+
+         else
+
+         {
+
+            if(dayno >= apps1[app][0] && dayno <= apps1[app][2])
+
+            {
+
+               retval = "<div class='hol' title='" + apps1[app][4] + "'>" + dayno + "</div>";
+
+            }
+
+         }
+
+      }
+
+      else if(m == apps1[app][3]) // second month
+
+      {
+
+         if(dayno <= apps1[app][2])
+
+         {
+
+            retval = "<div class='hol' title='" + apps1[app][4] + "'>" + dayno + "</div>";
+
+         }
+
+      }
+
+      else if( m > apps1[app][1] && m < apps1[app][3] )
+
+      {    
+
+         retval = "<div class='hol' title='" + apps1[app][4] + "'>" + dayno + "</div>";
+
+      }
+
+   }
+
+   return retval;
+
+}
+
+function CheckDate2(month,dayno)
+
+{
+
+   var retval = new String(dayno);
+
+   var m = month + 1;
+
+      for(var app = 0; app < apps2.length; app++)
+
+   {
+
+      if(m == apps2[app][1] ) //first month
+
+      {
+
+         if(apps2[app][3] - apps2[app][1] > 0)
+
+         {
+
+            if(dayno >= apps2[app][0])
+
+            {
+
+               retval = "<div class='hol' title='" + apps2[app][4] + "'>" + dayno + "</div>";
+
+            }
+
+         }
+
+         else
+
+         {
+
+            if(dayno >= apps2[app][0] && dayno <= apps2[app][2])
+
+            {
+
+               retval = "<div class='hol' title='" + apps2[app][4] + "'>" + dayno + "</div>";
+
+            }
+
+         }
+
+      }
+
+      else if(m == apps2[app][3]) // second month
+
+      {
+
+         if(dayno <= apps2[app][2])
+
+         {
+
+            retval = "<div class='hol' title='" + apps2[app][4] + "'>" + dayno + "</div>";
+
+         }
+
+      }
+
+      else if( m > apps2[app][1] && m < apps2[app][3] )
+
+      {    
+
+         retval = "<div class='hol' title='" + apps2[app][4] + "'>" + dayno + "</div>";
+
+      }
+
+   }
+
+   return retval;
+
+}
+
+function PrintMonth1(month)
+
+{
+
+   var done = false;
+
+   var day = 0;
+
+
+   document.write("<table class='inner'><caption><b>" + months[month] + "</b></caption><thead>");
+
+   document.write("<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></thead>");
+
+   while(!done)
+
+   {
+
+      document.write("<tr>");
+
+      PrintWeek1(month,day, firstdays[month], daycounts[month]);
+
+      document.write("</tr>");
+
+      day = day + 7;
+
+      if( day > daycounts[month] + firstdays[month])
+
+      {
+
+         done = true;
+
+      }
+
+   }
+
+   document.write("</tbody></table>");
+
+}
+
+function PrintMonth2(month)
+
+{
+
+   var done = false;
+
+   var day = 0;
+
+
+   document.write("<table class='inner'><caption><b>" + months[month] + "</b></caption><thead>");
+
+   document.write("<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></thead>");
+
+   while(!done)
+
+   {
+
+      document.write("<tr>");
+
+      PrintWeek2(month,day, firstdays[month], daycounts[month]);
+
+      document.write("</tr>");
+
+      day = day + 7;
+
+      if( day > daycounts[month] + firstdays[month])
+
+      {
+
+         done = true;
+
+      }
+
+   }
+
+   document.write("</tbody></table>");
+
+}
+
+
+
+function PrintWeek1(monthno,start,min,max)
+
+{
+
+   var d;
+
+   var desc;
+
+   for(var j = 0; j < 7; j++)
+
+   {
+
+      document.write("<td>");
+
+      d = start + j;
+
+      if(d >= min && d < max + min)
+
+      {
+
+         desc = CheckDate1(monthno,d - min + 1);
+
+         document.write(desc);
+
+      }
+
+      document.write("</td>");
+
+   }
+
+}
+
+function PrintWeek2(monthno,start,min,max)
+
+{
+
+   var d;
+
+   var desc;
+
+   for(var j = 0; j < 7; j++)
+
+   {
+
+      document.write("<td>");
+
+      d = start + j;
+
+      if(d >= min && d < max + min)
+
+      {
+
+         desc = CheckDate2(monthno,d - min + 1);
+
+         document.write(desc);
+
+      }
+
+      document.write("</td>");
+
+   }
+
+}
+
+</script>
+
+</HEAD>
+
+
+<BODY BACKGROUND="mainimg/tzpuz.jpg" bgproperties="fixed" >
+<div align="right"><FONT FACE="Tahoma" size=2>
+<a href="#" onClick="history.go(-1)">Go Back </a>/ 
+
+<A HREF="javascript:window.close()" title="close window"> Close Window</A></FONT></div>
+
+<table align=center width=480 cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+
+
+<table align=center width=460 cellpadding=0 cellspacing=0 border=0>
+<tr><td width=25% align=center valign=bottom><p><br></p>
+<IMG SRC="bbimg/DSCN3958a.jpg" WIDTH=140 border=0 ALT="Bouquet Room"><br><FONT color=#eeaacc FACE="Tahoma" size=1><b>Bouquet Room</b></font>
+</td><td width=50% align=center valign=BOTTOM BGCOLOR=WHITE> <IMG SRC="mainimg/lovelogo2colorsm.png" WIDTH=240 ALT="Tex-Zen Dreams Love Can Build a Bridge Logo">
+<FONT FACE="vivaldi" size=4><b>bed and breakfast</b></font><FONT FACE="tahoma" size=1> <P>
+Dripping Springs, Texas<br>512-364-9072</P></FONT><p><FONT FACE="tahoma" size=2 COLOR=MAROON><b>Cottage-of-Dreams<br>Room Availability</b></font></p>
+</td><td width=25% align=center valign=bottom><p><br></p>
+<IMG SRC="bbimg/DSCN3898b.jpg" WIDTH=140 border=0 ALT="Boutonniere Room"><br><FONT color=#889977 FACE="Tahoma" size=1><b>Boutonniere Room</b></font>
+</td>
+</tr>
+</table>
+<p align="justify"><font size=1 face=arial >The calendar is up-to-date for bookings more than one or two days away. Because of last minute cancellations and last minute bookings within a day or hours of arrival, please call for tonight or tomorrow's availability.</font></p>
+
+<font size=1 face=arial color=gray>
+
+(RED dates are reserved. Hold mouse over RED date for description)
+
+</font>
+
+<table border=0 bgcolor=beige cellspacing=10 width=460 >
+<tr><td align=center valign="top"><FONT color=#eeaacc FACE="Tahoma" size=2><b>Bouquet Room</b></font>
+</td><td width=25% ></td><td align=center valign="top"><FONT color=#889977 FACE="Tahoma" size=2><b>Boutonniere Room</b></font>
+</td></tr>
+
+<!-- Displayed Months - Change months in parenthesis below. Follow pattern Jan=0,feb=1,mar=2,apr=3,may=4,jun=5,jul=6,aug=7,sept=8,oct=9,nov=10,dec=11 --> 
+
+
+<tr>
+<td class="outer1" valign="top">
+<script type="text/javascript">
+PrintMonth1(2);
+</script>
+</td>
+
+<td width=25% ></td>
+
+<td class="outer2" align=center valign="top">
+<script type="text/javascript">
+PrintMonth2(2);
+</script>
+</td>
+</tr>
+
+<tr>
+<td class="outer1" valign="top">
+<script type="text/javascript">
+PrintMonth1(3);
+</script>
+</td>
+
+<td width=25% ></td>
+
+<td class="outer2" align=center valign="top">
+<script type="text/javascript">
+PrintMonth2(3);
+</script>
+</td>
+</tr>
+
+<tr>
+<td class="outer1" valign="top">
+<script type="text/javascript">
+PrintMonth1(4);
+</script>
+</td>
+
+<td width=25% ></td>
+
+<td class="outer2" align=center valign="top">
+<script type="text/javascript">
+PrintMonth2(4);
+</script>
+</td>
+</tr>
+</tr></table>
+
+<!-- End of displayed months --> 
+
+<p><font face="arial, helvetica" size="1">Texas hill country lodging, Hill country vacation rental, Honeymoon or anniversary retreat,<br>Dripping Springs getaway, Romantic accommodations, Weddings, Quiet & peaceful.</font></p>
+
+<p><center>
+
+<font face="arial, helvetica" size="-2">Free JavaScripts provided 
+
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+
+</center><p>
+
+</TD></TR></TABLE>
+
+<!-- Script Size:  5.48 KB -->
+</body></html>
