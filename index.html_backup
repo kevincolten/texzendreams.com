@@ -82,7 +82,7 @@ When Frontpage Server Extensions are enabled a Frontpage user named <i>webmaster
 								<TD><FONT SIZE="4" COLOR="#339933" FACE="Helvetica, Arial"><B>Site Management Access<BR>
 									<BR>
 									</B></FONT><FONT SIZE="2" FACE="Helvetica, Arial">Site administrators use the URL:<BR>
-									</FONT><A HREF="http://[DOMAIN]/siteadmin/"><FONT SIZE="2" FACE="Helvetica, Arial">http://[DOMAIN]/siteadmin/<BR>
+									</FONT><A HREF="https://[DOMAIN]/siteadmin/"><FONT SIZE="2" FACE="Helvetica, Arial">https://[DOMAIN]/siteadmin/<BR>
 									<BR>
 									</FONT></A><FONT SIZE="2" FACE="Helvetica, Arial">Once you enter this URL, you will
 									be prompted for the site administrator's user name and password which your hosting
@@ -112,10 +112,10 @@ When Frontpage Server Extensions are enabled a Frontpage user named <i>webmaster
 								<TD><FONT SIZE="4" COLOR="#339933" FACE="Helvetica, Arial"><B>Personal Account Management<BR>
 									<BR>
 									</B></FONT><FONT SIZE="2" FACE="Helvetica, Arial">Users manage their profile at the
-									URL: </FONT><A HREF="/personal/"><FONT SIZE="2" FACE="Helvetica, Arial">http://[DOMAIN]/personal/<BR>
+									URL: </FONT><A HREF="/personal/"><FONT SIZE="2" FACE="Helvetica, Arial">https://[DOMAIN]/personal/<BR>
 									<BR>
 									</FONT></A><FONT SIZE="2" FACE="Helvetica, Arial">Individual users have their own
-									web sites at the URL: http://[DOMAIN]/users/&lt;username&gt;/</FONT></TD>
+									web sites at the URL: https://[DOMAIN]/users/&lt;username&gt;/</FONT></TD>
 							</TR>
 							<TR>
 								<TD>&nbsp;</TD>
